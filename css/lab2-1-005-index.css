@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "微软雅黑", sans-serif;
+    background-color: #f5f5f5;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.fixed-btn {
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #2e8b57;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.fixed-btn:hover {
+    background-color: #1e5e3a;
+}
+
+.header {
+    width: 1200px;
+    margin: 10px auto;
+    overflow: hidden;
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+.logo {
+    float: left;
+    font-size: 28px;
+    font-weight: bold;
+    color: #2e8b57;
+    cursor: pointer;
+}
+
+.nav {
+    float: right;
+    margin-top: 8px;
+}
+
+.nav a {
+    float: left;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+}
+
+.nav a:hover {
+    background-color: #2e8b57;
+    color: white;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.left {
+    position: relative;
+    float: left;
+    width: 20%;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-right: 2%;
+    min-height: 500px;
+    z-index: 10;
+}
+
+.left h3 {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #2e8b57;
+}
+
+.left ul li {
+    list-style: none;
+    padding: 8px 0;
+    cursor: pointer;
+}
+
+.left ul li:hover {
+    color: #2e8b57;
+    padding-left: 8px;
+}
+
+.middle {
+    float: left;
+    width: 55%;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-right: 2%;
+    position: relative;
+    z-index: 5;
+}
+
+.section-title {
+    font-size: 20px;
+    margin: 20px 0 15px;
+    padding: 10px;
+    border-left: 4px solid #2e8b57;
+}
+
+/* 上方4本书 父相子绝+悬停 正常不动 */
+.four-box {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom:30px;
+}
+
+.four-item {
+    width: 23%;
+    float: left;
+    margin: 0 1%;
+    height: 140px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #eee;
+    cursor: pointer;
+}
+
+.four-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.four-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 8px 0;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.four-item:hover .four-text {
+    opacity: 1;
+}
+
+.four-item:hover img {
+    transform: scale(1.05);
+}
+
+/* 热门推荐 完整正常显示 */
+.hot-book {
+    width:100%;
+    overflow: hidden;
+}
+
+.book-item {
+    float: left;
+    width: 31%;
+    margin: 0 1.15%;
+    height: 240px;
+    overflow: hidden;
+    border: 1px solid #eee;
+    background: #fff;
+}
+
+.book-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+/* 直接彻底删掉三本的文字条，完全移除 */
+.book-info {
+    display:none;
+}
+
+.new-book table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+.new-book th,
+.new-book td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+}
+
+.new-book th {
+    background-color: #e8f5e9;
+}
+
+.right {
+    float: left;
+    width: 21%;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    min-height: 500px;
+    position: relative;
+    z-index: 10;
+}
+
+.sale-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 60px;
+    height: 25px;
+    background: red;
+    color: #fff;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 3px;
+}
+
+.right h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.right ul {
+    line-height: 2.2;
+}
+
+.hide-box {
+    color: #666;
+}
+
+.hide-demo:hover .hide-box {
+    display: none;
+}
+
+.hide-demo .show-tip {
+    display: none;
+    color: red;
+    font-weight: bold;
+}
+
+.hide-demo:hover .show-tip {
+    display: block;
+}
+
+.footer {
+    width: 1200px;
+    margin: 20px auto;
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    clear: both;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
